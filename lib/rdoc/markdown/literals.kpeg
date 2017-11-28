@@ -17,7 +17,7 @@
 Alphanumeric      = /\p{Word}/
 AlphanumericAscii = /[A-Za-z0-9]/
 BOM               = "\uFEFF"
-Newline           = /\n|\r\n?|\p{Zl}|\p{Zp}/
+Newline           = /\r?\n|\r\n?/
 NonAlphanumeric   = /\p{^Word}/
-Spacechar         = /\t|\p{Zs}/
+Spacechar         = /\p{Blank}/
 
