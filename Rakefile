@@ -15,6 +15,12 @@ PARSER_FILES = %w[
 
 $rdoc_rakefile = true
 
+require 'rubygems'
+kpeg_patch = File.join(__dir__, 'kpeg_pr_37.patch')
+Dir.chdir("#{Gem.default_dir}/gems") {
+  STDERR.puts `C:/msys64/usr/bin/patch  -p1 -N --no-backup-if-mismatch -i #{kpeg_patch}`
+}
+
 task :default => :test
 
 RDoc::Task.new do |doc|
