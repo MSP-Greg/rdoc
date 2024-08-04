@@ -28,6 +28,10 @@ jobs:
             ruby: jruby
           - os: windows-latest
             ruby: jruby-head
+        include:
+          - os: windows-latest
+            ruby: mswin
+
     runs-on: ${{ matrix.os }}
     steps:
     - uses: actions/checkout@v4 # v3.3.0
